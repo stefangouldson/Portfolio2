@@ -1,0 +1,226 @@
+body{
+    background-color: rgb(3, 3, 56);
+    color: white;
+    margin: 0;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    animation: fadeIn 2s;
+}
+
+/** Nav Bar styling */
+
+#nav-box{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2%;
+    position: fixed;
+    width: 100%;
+    background-color: rgb(3, 3, 56,0.5);
+    z-index: 999;
+}
+
+#workLink{
+    line-height: 30px;
+    color: white;
+    text-align: center;
+    text-shadow: black;
+    padding-left: 1%;
+    font-size: 20px;
+    width: 20%;
+    text-decoration: unset;
+}
+
+#workLink:hover{text-decoration: underline;}
+
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+    align-items: center;
+    line-height: 30px;
+}
+
+.navLink{
+    color: white;
+    font-size: 20px;
+    width: 33%;
+    height: 100%;
+    text-align: center;
+    text-decoration: unset;
+}
+
+.navLink:hover{
+    background-color: rgb(148, 6, 6);
+    cursor: pointer;
+}
+
+/** Intro styling */
+
+#intro{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    height: 100vh;
+    /* background-color: rgb(148, 6, 6); */
+}
+
+#img-box{
+    width: 30%;
+    padding: 1%;
+}
+
+#myPic{
+    margin:1%;
+    width: 300px;
+    height: 90vh;
+}
+
+#intro-text{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: center;
+    margin-right: 1%;
+}
+
+#project-button{
+    font-size: 200%;
+    color: white;
+    width: 30%;
+    text-align: center;
+    background-color: rgb(148, 6, 6);
+    border: solid rgb(148, 6, 6) 1px;
+    border-radius: 10px;
+}
+
+#project-button:hover{
+    background-color: rgb(3, 3, 56);
+    border: solid white 1px;
+}
+
+/** applies to entire portfolio */
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+.heading{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 300%;
+}
+
+.sub-head{
+    text-decoration: underline;
+    font-style: italic;
+}
+
+/** About page */
+
+.about-sub{
+    padding: 2%;
+    font-size: 150%;
+}
+
+/* .queryDivider{
+    height: 10px;
+} */
+
+/** Skills page */
+
+.logos{
+    width: 250px;
+    height: 250px;
+    background-color: aliceblue;
+    box-shadow: 2px 2px black;
+}
+
+.page{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-between;
+    font-size: 150%;
+}
+
+/* dropdown css */
+
+.dropdown-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    padding:1%;
+    margin-bottom: 5%;
+}
+
+.dropdown{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    font-size: 75%;
+    background-color: aliceblue;
+    color: rgb(3, 3, 56);
+    text-align: center;
+    width: 100%;
+    padding: 1%;
+    margin-top: 30px;
+    z-index: 1;
+}
+.dropdown:hover{color: rgb(148, 6, 6); cursor: pointer;}
+.dropdown:hover .dropdown-content{display: inline-block;}
+
+/*! This doesn't work */
+.dropdown-content:hover{display: none;}
+
+footer{
+    text-align: center;
+    background-color: rgb(148, 6, 6);
+    margin-bottom: 0;
+    padding: 0;
+    /* height: 100vw; */
+}
+
+h3{
+    margin: 0;
+    padding: 1%;
+    color: white;
+}
+
+#white{
+    color: white;
+    text-decoration: unset;
+}
+
+#white:hover{
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+
+  @media only screen and (max-width:700px){
+     #workLink{width: 40%; padding-left: 1%;}
+    .navLink{display: none;}
+    #intro{display: flex; flex-direction: column; align-items: center; justify-content:center}
+    #intro-text{display: none}
+    #img-box{ width: 100%; padding: 1%; display: flex; justify-content:center}
+    .logos{width: 75px; height: 75px;}
+    .dropdown-container{font-size: 50%;}
+    .sub-head{text-align: center;}
+  }

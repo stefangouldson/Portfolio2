@@ -1,0 +1,114 @@
+body{
+    margin: 0;
+    background-color: black;
+}
+
+/* Sets the video div to cover the entire screen */
+#video-box{
+    width:100vw;
+    height: 100vw;
+}
+ 
+/* Sets video to act as background */
+#myVid{
+    position: fixed;
+    top:50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+
+#content{
+    position: fixed;
+    bottom: 0%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    height: 40%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    animation: fadeIn 2s
+}
+
+h1 {opacity: 0;
+    animation: fadeInUp 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+/* Buttons on the welcome page */
+.welcome{
+    background-color:  rgb(17, 56, 247);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2em;
+    text-decoration: unset;
+    text-align: center;
+    width: 40%;
+    font-size: 150%;
+    margin-bottom:1%;
+    opacity: 0;
+    animation: fadeIn 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+.welcome:hover{
+    background-color:rgb(11, 6, 148);
+}
+
+.welcome:active{
+    transform: translateY(4px);
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 50%, 0);
+      transform: translate3d(0, 50%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  /* media quries to make website suitable for mobile/tv */
+
+  @media only screen and (max-width:700px){
+    #content{
+      height: 100%;
+      padding: 0;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+
+  @media only screen and (min-width:2000px){
+    #content{
+      font-size: 175%;
+    }
+  }
