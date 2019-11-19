@@ -73,7 +73,7 @@ body{
 
 #myPic{
     margin:1%;
-    width: 300px;
+    width: auto;
     height: 90vh;
 }
 
@@ -81,7 +81,7 @@ body{
     display: flex;
     flex-direction: column;
     text-align: left;
-    align-items: center;
+    align-items: flex-start;
     margin-right: 1%;
 }
 
